@@ -1,3 +1,17 @@
+ var firebaseConfig = {
+    apiKey: "AIzaSyC7NxVx5YYed5gzxdfAL3wTOHa9PpXwdPk",
+    authDomain: "fair-transit.firebaseapp.com",
+    databaseURL: "https://fair-transit.firebaseio.com",
+    projectId: "fair-transit",
+    storageBucket: "fair-transit.appspot.com",
+    messagingSenderId: "538543055783",
+    appId: "1:538543055783:web:8bbee58dc0a1b760af4c82",
+    measurementId: "G-ZGNKQ70HBQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
 function initMap() {
 
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -59,7 +73,7 @@ function makeInfoBox(controlDiv, map) {
   controlUI.appendChild(controlText);
 }
 
-var firebase = new Firebase("https://fair-transit.firebaseio.com");
+// var firebase = new Firebase("https://fair-transit.firebaseio.com");
 
 /**
  * Data object to be written to Firebase.
