@@ -7,6 +7,9 @@
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 	     https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+	<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
@@ -35,7 +38,7 @@
         });
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEpohRFU6BtYSYpJ-ra8fAt2nVln-BjZk&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEpohRFU6BtYSYpJ-ra8fAt2nVln-BjZk&libraries=visualization&callback=initMap"
     async defer></script>
     <script src="js/firebasemap.js"></script>
   </body>
