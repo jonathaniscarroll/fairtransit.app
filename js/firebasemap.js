@@ -103,14 +103,7 @@ function initAuthentication(onAuthSuccess) {
   });
 }
 
-// Listen for clicks and add them to the heatmap.
-clicks.orderByChild('timestamp').startAt(startTime).on('child_added',
-  function(snapshot) {
-    var newPosition = snapshot.val();
-    var point = new google.maps.LatLng(newPosition.lat, newPosition.lng);
-    heatmap.getData().push(point);
-  }
-);
+
 
 /**
  * Set up a Firebase with deletion on clicks older than expirySeconds
@@ -156,4 +149,13 @@ function initFirebase(heatmap) {
     }
     heatmapData.removeAt(i);
   });
+
+  // Listen for clicks and add them to the heatmap.
+clicks.orderByChild('timestamp').startAt(startTime).on('child_added',
+  function(snapshot) {
+    var newPosition = snapshot.val();
+    var point = new google.maps.LatLng(newPosition.lat, newPosition.lng);
+    heatmap.getData().push(point);
+  }
+);
 }
